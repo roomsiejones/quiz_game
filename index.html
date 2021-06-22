@@ -5,19 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Bootcamp Quiz</title>
 </head>
 <body>
-    <h1>Coding Quiz Challenge</h1>
+    <header>
+
+    <nav class="navbar bg-dark text-white">
+        <div class="highscore-button">View Highscores</div>
+        <div class="timer-text align-right"></div>
+    </nav>    
+    </header>
+    <div class="row justify-content-center">
+    <h1 class="min-vw-100 text-center my-5">Coding Quiz Challenge</h1>
     <!-- directions for the quiz -->
-    <p>Try to answer the following code-related questions within the time limit. Keep in mind the incorrect answers will penalize your score/time by ten seconds. Good luck!</p>
+    <p id="question">Try to answer the following code-related questions within the time limit. Keep in mind the incorrect answers will penalize your score/time by ten seconds. Good luck!</p>
+    
+    
+    <!-- Container to hold quiz and quiz questions -->
+    <div id='container'>
+
+        <div class="name-input" style="visibility: hidden;">
+            <input class="name-input-prompt" type="text" placeholder="Enter Name">
+            <button class="submit-button">Submit</button>
+            </div>
+
     <!-- start quiz button -->
-    <div class ="start-btn"><button>Start Quiz</button></div>
-    <ul>
-    </ul>  
+    <div class =" start start-btn"><button>Start Quiz</button></div>
+    <div id="quiz" style="display: none"></div>
+    <div id="ansChoices text-center">
+        
+        <div class="choice" id="A" onclick="checkAnswer('A')">A</div>
+        <div class="choice" id="B" onclick="checkAnswer('B')">B</div>
+        <div class="choice" id="C" onclick="checkAnswer('C')">C</div>
+        <div class="choice" id="D" onclick="checkAnswer('D')">D</div>
+
+    </div>   
+    </div>  
     
-    
+    </div>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
