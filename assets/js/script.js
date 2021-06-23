@@ -113,7 +113,7 @@
 			queryElement('#time').innerHTML = time;
 		} else {
 			clearInterval(clock);
-            score = 0;
+            // score = time;
 			queryElement('#score').innerHTML = score;
 			onlyDisplaySection("#finish");
 		}
