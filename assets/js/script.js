@@ -1,30 +1,3 @@
-// Need header to start with "coding Quiz Challenge"
-// Need instructions
-// need start quiz button
-// Need questions to replace the Headers
-// This is my array of objects containing my questions, answers, and correct answers.
-
-// 4 answers
-// correct answer
-// need buttons that are the choices to replace the instructions
-
-// need start quiz button to have gone away
-
-// need a correct answer to be stored
-
-// Need either "Correct!" to pop up and move to the next question or "wrong!" to show up, take away 15 seconds, and move to the next question
-// Need a timer to be counting down in the top right corner
-
-// When quiz is Over, need a screen that says "All done!" in the Header --'your final score is: (display the time remaining as a high score)' replacing where the initial instructions were -- a submission to store that high score to initials in the localStorage
-// after it is submitted -- need a 'go back' button that lets you retake the quiz, and a 'clear highscores' button that clears the localStorage
-
-// Need a 'view highscores in the top left' that takes us to a page that pulls up locally stored values assigned by students by initials
-
-// variables needed????
-
-// what pieces do I need for the html????
-
-
 // Creating initial variables needed
 	const initialTime = 75;
 	var time = 75;
@@ -136,10 +109,11 @@
         // timer initially
 	var myTimer = () => {
 		if (time > 0) {
-			time = time - 1;
+			time = time -1;
 			queryElement('#time').innerHTML = time;
 		} else {
 			clearInterval(clock);
+            score = 0;
 			queryElement('#score').innerHTML = score;
 			onlyDisplaySection("#finish");
 		}
@@ -171,7 +145,7 @@
 			}else{
 				time = time - 10;
                 score = time;
-				questionCount = questionCount + 1;
+                questionCount = questionCount + 1;
 				quizUpdate("Wrong");
 			}
 		});
