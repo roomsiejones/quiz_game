@@ -9,42 +9,59 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Bootcamp Quiz</title>
 </head>
-<body>
-    <header>
-
-    <nav class="navbar bg-dark text-white">
-        <div class="highscore-button">View Highscores</div>
-        <div class="timer-text align-right"></div>
-    </nav>    
-    </header>
-    <div class="row justify-content-center">
-    <h1 class="min-vw-100 text-center my-5">Coding Quiz Challenge</h1>
-    <!-- directions for the quiz -->
-    <p id="question">Try to answer the following code-related questions within the time limit. Keep in mind the incorrect answers will penalize your score/time by ten seconds. Good luck!</p>
-    
-    
-    <!-- Container to hold quiz and quiz questions -->
-    <div id='container'>
-
-        <div class="name-input" style="visibility: hidden;">
-            <input class="name-input-prompt" type="text" placeholder="Enter Name">
-            <button class="submit-button">Submit</button>
-            </div>
-
-    <!-- start quiz button -->
-    <div class =" start start-btn"><button>Start Quiz</button></div>
-    <div id="quiz" style="display: none"></div>
-    <div id="ansChoices text-center">
-        
-        <div class="choice" id="A" onclick="checkAnswer('A')">A</div>
-        <div class="choice" id="B" onclick="checkAnswer('B')">B</div>
-        <div class="choice" id="C" onclick="checkAnswer('C')">C</div>
-        <div class="choice" id="D" onclick="checkAnswer('D')">D</div>
-
-    </div>   
-    </div>  
-    
+<div class="bg-dark text-white">
+    <div id="topbar">
+      <button id="scores" href="">View High Scores</button>
+      <div id="timer"><p>Time: <span id="time">0</span></p></div>
     </div>
-    <script src="./assets/js/script.js"></script>
+  </div>
+    
+  
+  <div id="positionWrapper">
+    <section id="explain">
+      <h1 class='my-3'>Coding Quiz Challenge</h1>
+      <p>Try to answer the following code-related questions within the time limit.
+        Keep in mind that incorrect answers will penalize your score/time by ten seconds.
+      </p>
+      <button>Start Quiz</button>
+  
+    </section>
+  
+    <section id="quizHolder" class="hide my-2">
+      <p id="title"></p>
+      <!-- Buttons to accept question values-->
+      <button></button>
+      <button></button>
+      <button></button>
+      <button></button>
+      <div id="scoreIndicator" class="invisible">
+        <p>&nbsp;</p>
+      </div>
+    </section>
+  
+    <section id="finish" class="hide">
+      <h1>All Done</h1>
+      <p>Your final score is&nbsp;<span id="score"></span></p>
+      <div id="records">
+        <p>Enter initials: </p><input id="initials" type="text"> <button>Submit</button>
+      </div>
+      <div id="errorIndicator" class="invisible">
+        <p>&nbsp;</p>
+      </div>
+    </section>
+  
+    <section id="highScores" class="hide">
+      <h1>High Scores</h1>
+      <div>
+  
+      </div>
+      <button class="m-5" id="reset">Go Back</button> <button class="m-5" id="clearScores">Clear Highscores</button>
+    </section>
+  </div>
+   
+  <script src="assets/js/script.js"></script>
+
+<body>
+    
 </body>
 </html>
